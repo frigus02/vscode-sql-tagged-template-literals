@@ -7,7 +7,7 @@
 })();
 
 (function() {
-  const sql = (name: string) => (
+  const sql = (name: string, optionalArg?: number) => (
     strings: TemplateStringsArray,
     ...values: any[]
   ) => ({
@@ -18,6 +18,17 @@
 
   const userId = 1;
   const query = sql("test")`
+    SELECT
+      *
+    FROM
+      users
+    WHERE
+      user_id = ${userId}
+  `;
+
+  const queryFunction = (userId: string) => sql(
+    "test-name-which-is-too-long-for-this-line"
+  )`
     SELECT
       *
     FROM

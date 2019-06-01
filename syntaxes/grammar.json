@@ -20,6 +20,33 @@
         { "include": "source.plpgsql.postgres" },
         { "match": "." }
       ]
+    },
+    {
+      "name": "string.js.tagged-template.sql.multiline",
+      "begin": "(\\bsql\\b)\\s*\\(\\s*$",
+      "beginCaptures": {
+        "1": { "name": "entity.name.function.ts" }
+      },
+      "end": "(?<=`)",
+      "patterns": [
+        {
+          "contentName": "meta.embedded.block.sql",
+          "begin": "(`)",
+          "beginCaptures": {
+            "1": { "name": "punctuation.definition.string.template.begin.js" }
+          },
+          "end": "(`)",
+          "endCaptures": {
+            "1": { "name": "punctuation.definition.string.template.end.js" }
+          },
+          "patterns": [
+            { "include": "source.ts#template-substitution-element" },
+            { "include": "source.sql" },
+            { "include": "source.plpgsql.postgres" },
+            { "match": "." }
+          ]
+        }
+      ]
     }
   ]
 }
