@@ -23,7 +23,7 @@ Run this:
 
 ```
 npm install -g vsce
-vsce publish
+vsce package
 ```
 
 And you'll get: `vscode-sql-tagged-template-literals-0.0.1.vsix`
