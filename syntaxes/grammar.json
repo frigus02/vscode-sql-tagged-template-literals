@@ -22,9 +22,9 @@
         },
         {
           "contentName": "meta.embedded.block.sql",
-          "begin": "(?<=\\))\\s*(`)",
+          "begin": "`",
           "beginCaptures": {
-            "1": { "name": "punctuation.definition.string.template.begin.js" }
+            "0": { "name": "punctuation.definition.string.template.begin.js" }
           },
           "end": "`",
           "endCaptures": {
