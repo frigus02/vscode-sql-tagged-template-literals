@@ -1,5 +1,8 @@
 (function() {
-  const sql = String.raw;
+  const sql = (strings: TemplateStringsArray, ...values: any[]) => ({
+    text: String.raw(strings, ...values.map((_, i) => `$${i + 1}`)),
+    values
+  });
 
   const query = sql`
     SELECT * FROM users
@@ -37,14 +40,16 @@
       user_id = ${userId}
   `;
 
-  const queryFunctionWithTemplateName = (userId: string) => sql(
-    `test-name-${userId}-which-is-too-long-for-this-line`
-  )`
+  const queryFunctionWithTemplateName = (
+    userType: string,
+    userId: string
+  ) => sql(`get-users-of-type-${userType}`)`
     SELECT
       *
     FROM
       users
     WHERE
       user_id = ${userId}
+      AND user_type = ${userType}
   `;
 })();

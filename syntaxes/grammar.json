@@ -3,41 +3,47 @@
   "injectionSelector": "L:source -comment -string",
   "patterns": [
     {
+      "begin": "(\\bsql\\b)\\s*(?=`)",
+      "beginCaptures": {
+        "0": { "name": "string.template.ts" },
+        "1": { "name": "entity.name.function.tagged-template.ts" }
+      },
+      "end": "(?<=`)",
+      "patterns": [{ "include": "#embedded-sql" }]
+    },
+    {
       "begin": "(\\bsql\\b)\\s*(?=\\()",
       "beginCaptures": {
+        "0": { "name": "meta.function-call.ts" },
         "1": { "name": "entity.name.function.ts" }
       },
       "end": "(?<=`)",
       "patterns": [
-        {
-          "begin": "\\(",
-          "beginCaptures": {
-            "0": { "name": "meta.brace.round.ts" }
-          },
-          "end": "\\)",
-          "endCaptures": {
-            "0": { "name": "meta.brace.round.ts" }
-          },
-          "patterns": [{ "include": "source.ts" }]
-        },
-        {
-          "contentName": "meta.embedded.block.sql",
-          "begin": "`",
-          "beginCaptures": {
-            "0": { "name": "punctuation.definition.string.template.begin.js" }
-          },
-          "end": "`",
-          "endCaptures": {
-            "0": { "name": "punctuation.definition.string.template.end.js" }
-          },
-          "patterns": [
-            { "include": "source.ts#template-substitution-element" },
-            { "include": "source.sql" },
-            { "include": "source.plpgsql.postgres" },
-            { "match": "." }
-          ]
-        }
+        { "include": "source.ts#comment" },
+        { "include": "source.ts#type-arguments" },
+        { "include": "source.ts#paren-expression" },
+        { "include": "#embedded-sql" }
       ]
     }
-  ]
+  ],
+  "repository": {
+    "embedded-sql": {
+      "name": "string.template.ts",
+      "contentName": "meta.embedded.block.sql",
+      "begin": "`",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.template.begin.js" }
+      },
+      "end": "`",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.template.end.js" }
+      },
+      "patterns": [
+        { "include": "source.ts#template-substitution-element" },
+        { "include": "source.sql" },
+        { "include": "source.plpgsql.postgres" },
+        { "match": "." }
+      ]
+    }
+  }
 }
