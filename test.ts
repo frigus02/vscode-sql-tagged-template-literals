@@ -36,4 +36,15 @@
     WHERE
       user_id = ${userId}
   `;
+
+  const queryFunctionWithTemplateName = (userId: string) => sql(
+    `test-name-${userId}-which-is-too-long-for-this-line`
+  )`
+    SELECT
+      *
+    FROM
+      users
+    WHERE
+      user_id = ${userId}
+  `;
 })();

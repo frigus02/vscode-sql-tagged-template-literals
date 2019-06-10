@@ -3,41 +3,32 @@
   "injectionSelector": "L:source -comment -string",
   "patterns": [
     {
-      "name": "string.js.tagged-template.sql",
-      "contentName": "meta.embedded.block.sql",
-      "begin": "(\\bsql\\b)\\s*(\\(.*?\\))?\\s*(`)",
-      "beginCaptures": {
-        "1": { "name": "entity.name.function.ts" },
-        "3": { "name": "punctuation.definition.string.template.begin.js" }
-      },
-      "end": "(`)",
-      "endCaptures": {
-        "1": { "name": "punctuation.definition.string.template.end.js" }
-      },
-      "patterns": [
-        { "include": "source.ts#template-substitution-element" },
-        { "include": "source.sql" },
-        { "include": "source.plpgsql.postgres" },
-        { "match": "." }
-      ]
-    },
-    {
-      "name": "string.js.tagged-template.sql.multiline",
-      "begin": "(\\bsql\\b)\\s*\\(\\s*$",
+      "begin": "(\\bsql\\b)\\s*(?=\\()",
       "beginCaptures": {
         "1": { "name": "entity.name.function.ts" }
       },
       "end": "(?<=`)",
       "patterns": [
         {
+          "begin": "\\(",
+          "beginCaptures": {
+            "0": { "name": "meta.brace.round.ts" }
+          },
+          "end": "\\)",
+          "endCaptures": {
+            "0": { "name": "meta.brace.round.ts" }
+          },
+          "patterns": [{ "include": "source.ts" }]
+        },
+        {
           "contentName": "meta.embedded.block.sql",
-          "begin": "(`)",
+          "begin": "(?<=\\))\\s*(`)",
           "beginCaptures": {
             "1": { "name": "punctuation.definition.string.template.begin.js" }
           },
-          "end": "(`)",
+          "end": "`",
           "endCaptures": {
-            "1": { "name": "punctuation.definition.string.template.end.js" }
+            "0": { "name": "punctuation.definition.string.template.end.js" }
           },
           "patterns": [
             { "include": "source.ts#template-substitution-element" },
