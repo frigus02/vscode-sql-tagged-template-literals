@@ -43,7 +43,7 @@
   const queryFunctionWithTemplateName = (
     userType: string,
     userId: string
-  ) => sql(`get-users-of-type-${userType}`)`
+  ) => sql(`get-user-of-type-${userType}`)`
     SELECT
       *
     FROM

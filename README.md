@@ -1,21 +1,14 @@
-# Test for VS Code extension: SQL tagged template literals
+# VS Code extension: SQL tagged template literals
 
-This is a test for a VS Code extension. It enables syntax highlighting for template literals tagged with an `sql` function is JavaScript and TypeScript files.
+A VS Code extension, which enables syntax highlighting for template literals tagged with an `sql` function in JavaScript and TypeScript files.
 
-```ts
-const query1 = sql`
-  SELECT * FROM users
-`;
+It works with simple tagged template literals:
 
-const query2 = sql("get-user")`
-  SELECT
-    *
-  FROM
-    users
-  WHERE
-    user_id = ${userId}
-`;
-```
+![Code snippet of tagged template literal (sql``) highlighted as SQL](./docs/simple.png)
+
+As well as with an `sql` function returning a template tag function:
+
+![Code snippet of function returning template tag function (sql()``) highlighted as SQL](./docs/function-call.png)
 
 ## Package
 
@@ -26,14 +19,14 @@ npm install -g vsce
 vsce package
 ```
 
-And you'll get: `vscode-sql-tagged-template-literals-0.0.1.vsix`
+And you'll get: `vscode-sql-tagged-template-literals-VERSION.vsix`
 
 ## Install
 
 Get the packaged extension and run:
 
 ```
-code --install-extension vscode-sql-tagged-template-literals-0.0.1.vsix
+code --install-extension vscode-sql-tagged-template-literals-VERSION.vsix
 ```
 
 ## Learnings
