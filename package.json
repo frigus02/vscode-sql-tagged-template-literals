@@ -19,7 +19,7 @@
     "onLanguage:typescript",
     "onLanguage:typescriptreact"
   ],
-  "main": "build/index.js",
+  "main": "./build/index.js",
   "contributes": {
     "configuration": [
       {
