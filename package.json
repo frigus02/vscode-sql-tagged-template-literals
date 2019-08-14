@@ -15,7 +15,28 @@
   "categories": [
     "Programming Languages"
   ],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "build/index.js",
   "contributes": {
+    "configuration": [
+      {
+        "id": "sql-tagged-template-literals",
+        "title": "SQL tagged template literals",
+        "properties": {
+          "sql-tagged-template-literals.schemaFile": {
+            "type": "string",
+            "description": "Path to JSON file describing the types used in youe database schema. See https://github.com/frigus02/typescript-sql-tagged-template-plugin for more information."
+          },
+          "sql-tagged-template-literals.defaultSchemaName": {
+            "type": "string",
+            "description": "Databse schema name used when SQL statements don't specify a schema."
+          }
+        }
+      }
+    ],
     "grammars": [
       {
         "injectTo": [
@@ -31,6 +52,29 @@
           "meta.embedded.block.sql": "sql"
         }
       }
+    ],
+    "typescriptServerPlugins": [
+      {
+        "name": "typescript-sql-tagged-template-plugin",
+        "enableForWorkspaceTypeScriptVersions": true
+      }
+    ],
+    "jsonValidation": [
+      {
+        "fileMatch": "tsconfig*.json",
+        "url": "./schemas/tsconfig.schema.json"
+      }
     ]
+  },
+  "dependencies": {
+    "typescript-sql-tagged-template-plugin": "^0.0.10"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3",
+    "vscode": "^1.1.36"
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn compile",
+    "compile": "yarn tsc"
   }
 }
