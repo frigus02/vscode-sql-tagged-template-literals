@@ -551,10 +551,10 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-typescript-sql-tagged-template-plugin@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/typescript-sql-tagged-template-plugin/-/typescript-sql-tagged-template-plugin-0.0.10.tgz#647bf2f76d6a7acd4ed3953e16efd448c48d276e"
-  integrity sha512-woNe5kYV1evwXvniSsrDKwTili+hHBidPD2gykEUVq3sWTkmy+HsOTSmI7Zo/UJ6qJ3dcqWr5kdZ9I0mqViGLw==
+typescript-sql-tagged-template-plugin@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/typescript-sql-tagged-template-plugin/-/typescript-sql-tagged-template-plugin-0.0.11.tgz#19b7318415effd485ac764092cc38093ac6f94c6"
+  integrity sha512-VN5E52IWJIupCaoXavQ/V2HgZiP5Xh8F20cB4mjorqeBW6t8l0b43R6mcb0CgniFkHXGERoRRYWG6rMK/bTiIg==
   dependencies:
     pg-query-emscripten "^0.1.0"
     typescript-template-language-service-decorator "^2.2.0"
