@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TS Lint plugin contributions to package.json",
+  "type": "object",
+  "properties": {
+    "compilerOptions": {
+      "type": "object",
+      "properties": {
+        "plugins": {
+          "type": "array",
+          "items": {
+            "if": {
+              "properties": {
+                "name": {
+                  "enum": ["typescript-sql-tagged-template-plugin"]
+                }
+              },
+              "required": ["name"]
+            },
+            "then": {
+              "properties": {
+                "schemaFile": {
+                  "type": "string",
+                  "description": "Path to JSON file describing the types used in youe database schema. See https://github.com/frigus02/typescript-sql-tagged-template-plugin for more information."
+                },
+                "defaultSchemaName": {
+                  "type": "string",
+                  "description": "Databse schema name used when SQL statements don't specify a schema."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
