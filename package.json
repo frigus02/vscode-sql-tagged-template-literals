@@ -27,7 +27,7 @@
         "frigus02.vscode-sql-tagged-template-literals.schemaFile": {
           "type": "string",
           "scope": "window",
-          "markdownDescription": "Path to JSON file describing the types used in youe database schema. See [plugin documentation](https://github.com/frigus02/typescript-sql-tagged-template-plugin) for how to generate the file. This setting should either contain an absolute path to the file or a path relative to the VS Code workspace root."
+          "markdownDescription": "Path to JSON file describing the types used in your database schema. See [plugin documentation](https://github.com/frigus02/typescript-sql-tagged-template-plugin) for how to generate the file. You can specify the path in different ways:\n- Relative to the workspace root (only if you're working in a VS Code workspace with a single workspace folder)\n- Relative to the `tsconfig.json` file\n- Absolute"
         },
         "frigus02.vscode-sql-tagged-template-literals.defaultSchemaName": {
           "type": "string",
@@ -66,9 +66,10 @@
     ]
   },
   "dependencies": {
-    "typescript-sql-tagged-template-plugin": "^0.0.11"
+    "typescript-sql-tagged-template-plugin": "0.0.12"
   },
   "devDependencies": {
+    "@types/node": "^12.7.2",
     "typescript": "^3.5.3",
     "vscode": "^1.1.36"
   },
