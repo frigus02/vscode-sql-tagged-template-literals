@@ -21,22 +21,21 @@
   ],
   "main": "./build/index.js",
   "contributes": {
-    "configuration": [
-      {
-        "id": "sql-tagged-template-literals",
-        "title": "SQL tagged template literals",
-        "properties": {
-          "sql-tagged-template-literals.schemaFile": {
-            "type": "string",
-            "description": "Path to JSON file describing the types used in youe database schema. See https://github.com/frigus02/typescript-sql-tagged-template-plugin for more information."
-          },
-          "sql-tagged-template-literals.defaultSchemaName": {
-            "type": "string",
-            "description": "Databse schema name used when SQL statements don't specify a schema."
-          }
+    "configuration": {
+      "title": "SQL tagged template literals",
+      "properties": {
+        "frigus02.vscode-sql-tagged-template-literals.schemaFile": {
+          "type": "string",
+          "scope": "window",
+          "markdownDescription": "Path to JSON file describing the types used in youe database schema. See [plugin documentation](https://github.com/frigus02/typescript-sql-tagged-template-plugin) for how to generate the file. This setting should either contain an absolute path to the file or a path relative to the VS Code workspace root."
+        },
+        "frigus02.vscode-sql-tagged-template-literals.defaultSchemaName": {
+          "type": "string",
+          "scope": "window",
+          "markdownDescription": "Databse schema name used when SQL statements don't specify a schema. Defaults to `public`."
         }
       }
-    ],
+    },
     "grammars": [
       {
         "injectTo": [
@@ -73,6 +72,9 @@
     "typescript": "^3.5.3",
     "vscode": "^1.1.36"
   },
+  "extensionDependencies": [
+    "vscode.typescript-language-features"
+  ],
   "scripts": {
     "vscode:prepublish": "yarn compile",
     "compile": "yarn tsc"

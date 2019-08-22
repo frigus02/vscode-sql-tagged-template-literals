@@ -15,7 +15,7 @@ interface Api {
   getAPI(version: 0): ApiV0 | undefined;
 }
 
-export const getTypeScriptLanguageFeaturesExtensionAPI = async () => {
+export const getTypeScriptLanguageFeaturesExtensionAPI = () => {
   const extension = vscode.extensions.getExtension(
     "vscode.typescript-language-features"
   );
@@ -23,7 +23,6 @@ export const getTypeScriptLanguageFeaturesExtensionAPI = async () => {
     return;
   }
 
-  await extension.activate();
   if (!extension.exports || !extension.exports.getAPI) {
     return;
   }
