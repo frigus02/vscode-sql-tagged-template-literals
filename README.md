@@ -10,6 +10,7 @@ In TypeScript files it also enables SQL syntax checking and type checking for pa
 
 ## Interesting bits about the grammar
 
+- To debug the grammer, check the language scopes using the - `Developer: Inspect TM Scopes` command.
 - If `patterns[].name` does not start with `string.js`, the code matched by the pattern (beginning and end) are not highlighted as JavaScript code.
 - The keys in `beginCaptures` and `endCaptures` refer to the capture groups in the corresponding regex, where `0` refers to the entire match. By assigning capture groups a name, they can be highlighted accordingly. E.g. using `entity.name.function.ts` makes the string matched by the capture group be highlighted as a function name.
 - The pattern `source.ts#template-substitution-element` refers to the variables in the template literal, e.g. `${userId}`. It should probably be the first pattern in the list to ensure these are highlighted properly.
