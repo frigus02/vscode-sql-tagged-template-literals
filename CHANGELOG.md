@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- Type checking for builtin types like `Date` or `BigInt` (updated `typescript-sql-tagged-template-plugin`).
+
 ## [0.0.8] - 2019-09-01
 
 ### Added
@@ -76,7 +80,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[Unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.8...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.8...HEAD
 [0.0.8]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.7...v0.0.8
 [0.0.7]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.5...v0.0.6
