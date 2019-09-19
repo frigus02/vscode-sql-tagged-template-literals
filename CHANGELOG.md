@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Add SQL syntax highlighting for `sqlFragment` tag, e.g.:
+
+  ```ts
+  const queryFragment = sqlFragment`
+    WHERE user_id = 0
+  `;
+  ```
+
 ## [0.0.10] - 2019-09-10
 
 ### Fixed
