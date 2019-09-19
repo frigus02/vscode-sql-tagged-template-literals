@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.11] - 2019-09-19
+
 ### Added
 
 - Add SQL syntax highlighting for `sqlFragment` tag, e.g.:
@@ -98,7 +100,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.10...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.11...HEAD
+[0.0.11]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.10...v0.0.11
 [0.0.10]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.9...v0.0.10
 [0.0.9]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.7...v0.0.8
