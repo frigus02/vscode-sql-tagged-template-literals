@@ -1,0 +1,36 @@
+{
+  "name": "vscode-sql-tagged-template-literals-syntax-only",
+  "displayName": "SQL tagged template literals (syntax only)",
+  "description": "Syntax highlighting for SQL in template literals tagged with `sql` function",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "frigus02",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frigus02/vscode-sql-tagged-template-literals"
+  },
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx"
+        ],
+        "scopeName": "inline.tagged-template-sql",
+        "path": "./syntaxes/grammar.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.sql": "sql"
+        }
+      }
+    ]
+  }
+}
