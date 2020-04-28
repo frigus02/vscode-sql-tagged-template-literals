@@ -28,12 +28,10 @@ npm install -g vsce
 REPO=https://github.com/frigus02/vscode-sql-tagged-template-literals/raw/master/
 
 cd extension/
-vsce package --baseImagesUrl $REPO/extension/
-vsce publish *.vsix
+vsce publish --baseImagesUrl $REPO/extension/
 
 cd extension-syntax-only/
-vsce package --baseImagesUrl $REPO/extension-syntax-only/
-vsce publish *.vsix
+vsce publish --baseImagesUrl $REPO/extension-syntax-only/
 ```
 
 ## Thanks
