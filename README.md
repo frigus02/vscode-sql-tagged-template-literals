@@ -7,7 +7,7 @@ There are 2 version of the extension available:
 - [extension](./extension): Syntax highlighting, syntax validation and type checking
 - [extension-syntax-only](./extension-syntax-only): Syntax highlighting only
 
-![GIF of code snippet showing SQL syntax](./extension/docs/preview.gif)
+![GIF of code snippet showing SQL syntax](./docs/preview.gif)
 
 ## Interesting bits about the grammar
 
@@ -24,7 +24,16 @@ _(For maintainers)_
 
 ```
 npm install -g vsce
-vsce publish
+
+REPO=https://github.com/frigus02/vscode-sql-tagged-template-literals/raw/master/
+
+cd extension/
+vsce package --baseImagesUrl $REPO/extension/
+vsce publish *.vsix
+
+cd extension-syntax-only/
+vsce package --baseImagesUrl $REPO/extension-syntax-only/
+vsce publish *.vsix
 ```
 
 ## Thanks

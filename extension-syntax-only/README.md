@@ -4,9 +4,9 @@ A VS Code extension, which enables syntax highlighting for template literals tag
 
 It works with simple tagged template literals as well as with an `sql` function returning a template tag function.
 
-If you're using PostgreSQL, check out [SQL tagged template literals](https://marketplace.visualstudio.com/items?itemName=frigus02.vscode-sql-tagged-template-literals), the same extension but including SQL syntax validation and type checking.
+If you're using PostgreSQL, have a look at [SQL tagged template literals](https://marketplace.visualstudio.com/items?itemName=frigus02.vscode-sql-tagged-template-literals), which is the same extension but also supports SQL syntax validation and type checking.
 
-![Image of code snippet showing SQL syntax](./docs/preview.png)
+![Image of code snippet showing SQL syntax](../docs/preview.png)
 
 ## Thanks
 
