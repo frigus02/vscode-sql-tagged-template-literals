@@ -2,11 +2,12 @@
 
 A VS Code extension, which enables syntax highlighting for template literals tagged with an `sql` function in JavaScript and TypeScript files.
 
-It works with simple tagged template literals as well as with an `sql` function returning a template tag function.
+There are 2 version of the extension available:
 
-In TypeScript files it also enables SQL syntax checking and type checking for parameters using the [typescript-sql-tagged-template-plugin](https://github.com/frigus02/typescript-sql-tagged-template-plugin). Type checking requires configuration of the database schema. You can have a look at the [plugin documentation](https://github.com/frigus02/typescript-sql-tagged-template-plugin#configuration) for details.
+- [extension](./extension): Syntax highlighting, syntax validation and type checking
+- [extension-syntax-only](./extension-syntax-only): Syntax highlighting only
 
-![GIF of code snippet showing SQL syntax and type errors](./docs/preview.gif)
+![GIF of code snippet showing SQL syntax](./docs/preview.gif)
 
 ## Interesting bits about the grammar
 
@@ -23,7 +24,14 @@ _(For maintainers)_
 
 ```
 npm install -g vsce
-vsce publish
+
+REPO=https://github.com/frigus02/vscode-sql-tagged-template-literals/raw/master/
+
+cd extension/
+vsce publish --baseImagesUrl $REPO/extension/
+
+cd extension-syntax-only/
+vsce publish --baseImagesUrl $REPO/extension-syntax-only/
 ```
 
 ## Thanks
