@@ -29,13 +29,12 @@
       ]
     },
     {
-      "begin": "/\\* SQL \\*/\\s*(?=`)",
+      "begin": "(/\\*\\s*(?i)sql(?-i)\\s*\\*/)\\s*(?=`)",
       "beginCaptures": {
-        "0": { "name": "string.template.ts" }
+        "1": { "name": "comment.block.ts" }
       },
       "end": "(?<=`)",
-      "patterns": [
-        { "include": "#embedded-sql" }]
+      "patterns": [{ "include": "#embedded-sql" }]
     }
   ],
   "repository": {
