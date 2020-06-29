@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Syntax highlighting for `sql` tag function, which is a class member:
+
+  ```ts
+  class SomeService {
+    sql(s: TemplateStringsArray, ...values: any[]) {}
+
+    method() {
+      this.sql`SELECT * FROM users`;
+    }
+  }
+  ```
+
 ## [0.0.13] - 2020-06-29
 
 ### Added
