@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.13] - 2020-06-29
+
+### Added
+
+- Support for highlighting template literals with an `/* SQL */` comment in front, e.g.
+
+  ```ts
+  const query = /* SQL */`
+    SELECT * FROM users
+  `;
+  ```
+
+  Thanks [@n1ru4l](https://github.com/n1ru4l).
+
 ## [0.0.12] - 2020-04-28
 
 ### Added
@@ -76,10 +90,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.12...HEAD
-[0.0.11]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.11...v0.0.12
-[0.0.11]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.10...v0.0.11
-[0.0.8]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.7...v0.0.8
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.13...HEAD
+[0.0.13]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.12...v0.0.13
+[0.0.12]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.11...v0.0.12
+[0.0.11]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.8...v0.0.11
+[0.0.8]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.4...v0.0.8
 [0.0.4]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.1...v0.0.2
