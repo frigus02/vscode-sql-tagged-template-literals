@@ -27,6 +27,15 @@
         { "include": "source.ts#paren-expression" },
         { "include": "#embedded-sql" }
       ]
+    },
+    {
+      "begin": "/\\* SQL \\*/\\s*(?=`)",
+      "beginCaptures": {
+        "0": { "name": "string.template.ts" }
+      },
+      "end": "(?<=`)",
+      "patterns": [
+        { "include": "#embedded-sql" }]
     }
   ],
   "repository": {
