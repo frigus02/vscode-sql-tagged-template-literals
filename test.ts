@@ -40,7 +40,7 @@ function sqlTag() {
   const obj = { sql };
 
   const getAllOrders = () => obj.sql<Order[]>`
-    SELECT * FROM orders o
+    SELECT * FROM orders
   `;
 }
 
@@ -108,7 +108,7 @@ function sqlFunction() {
 
   const obj = { sql };
 
-  const getAllOrders = () => obj.sql<Order[]>`
-    SELECT * FROM orders o
+  const getAllOrders = () => obj.sql<Order[]>("get-all-orders")`
+    SELECT * FROM orders
   `;
 }
