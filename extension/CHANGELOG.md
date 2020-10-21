@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.14] - 2020-10-21
+
 ### Added
 
 - Syntax highlighting for `sql` tag function, which has types or is part of an object:
@@ -132,7 +134,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.13...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.14...HEAD
+[0.0.14]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.13...v0.0.14
 [0.0.13]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.12...v0.0.13
 [0.0.12]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.11...v0.0.12
 [0.0.11]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.10...v0.0.11

@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.14] - 2020-10-21
+
+### Added
+
+- Syntax highlighting for `sql` tag function, which has types or is part of an object:
+
+  ```ts
+  const myObj = {
+    sql<T>(s: TemplateStringsArray, ...values: any[]) {},
+  };
+
+  myObj.sql<User>`SELECT * FROM users`;
+  ```
+
 ## [0.0.13] - 2020-06-29
 
 ### Added
@@ -13,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Support for highlighting template literals with an `/* SQL */` comment in front, e.g.
 
   ```ts
-  const query = /* SQL */`
+  const query = /* SQL */ `
     SELECT * FROM users
   `;
   ```
@@ -90,7 +104,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.13...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.14...HEAD
+[0.0.14]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.13...v0.0.14
 [0.0.13]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.12...v0.0.13
 [0.0.12]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.11...v0.0.12
 [0.0.11]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.8...v0.0.11
