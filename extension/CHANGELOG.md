@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Syntax highlighting for `sql` tag function, which has types or is part of an object:
+
+  ```ts
+  const myObj = {
+    sql<T>(s: TemplateStringsArray, ...values: any[]) {},
+  };
+
+  myObj.sql<User>`SELECT * FROM users`;
+  ```
+
 ## [0.0.13] - 2020-06-29
 
 ### Added
