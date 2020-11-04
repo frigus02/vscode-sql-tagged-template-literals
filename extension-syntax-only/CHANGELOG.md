@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- Allow for escaped backticks in SQL queries:
+
+  ```ts
+  /*sql*/ `SELECT * FROM \`users\``;
+  ```
+
 ## [0.0.14] - 2020-10-21
 
 ### Added

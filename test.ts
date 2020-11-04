@@ -13,20 +13,20 @@ function sqlTag() {
   });
 
   const createOrder = (userId: string, notes: string | null) => sql`
-	  INSERT INTO orders(
-		  user_id
-		  notes,
-		  status,
-		  created_at,
-		  updated_at
-	  ) VALUES(
-		  ${userId},
-		  ${notes},
-		  'created',
-		  NOW(),
-		  NOW()
-	  )
-	  RETURNING *
+    INSERT INTO orders(
+      user_id
+      notes,
+      status,
+      created_at,
+      updated_at
+    ) VALUES(
+      ${userId},
+      ${notes},
+      'created',
+      NOW(),
+      NOW()
+    )
+    RETURNING *
   `;
 
   interface Order {
@@ -34,7 +34,7 @@ function sqlTag() {
   }
 
   const getOrder = (orderId: number) => sql<Order>`
-	SELECT * FROM orders WHERE order_id = ${orderId}
+    SELECT * FROM orders WHERE order_id = ${orderId}
   `;
 
   const obj = { sql };
@@ -46,21 +46,27 @@ function sqlTag() {
 
 function sqlComment() {
   const createOrder = (userId: string, notes: string | null) => /* sql */ `
-		INSERT INTO orders(
-			user_id
-			notes,
-			status,
-			created_at,
-			updated_at
-		) VALUES(
-			${userId},
-			${notes},
-			'created',
-			NOW(),
-			NOW()
-		)
-		RETURNING *
-	`;
+    INSERT INTO orders(
+      user_id
+      notes,
+      status,
+      created_at,
+      updated_at
+    ) VALUES(
+      ${userId},
+      ${notes},
+      'created',
+      NOW(),
+      NOW()
+    )
+    RETURNING *
+  `;
+
+  const createTable = () => /*sql*/`
+    CREATE TABLE \`teams\` (
+      \`Id\` INT AUTO_INCREMENT PRIMARY KEY
+    )
+  `;
 }
 
 function sqlFunction() {
@@ -82,20 +88,20 @@ function sqlFunction() {
   const createOrder = (userId: string, notes: string | null) => sql(
     "create-order"
   )`
-	INSERT INTO orders(
-		user_id
-		notes,
-		status,
-		created_at,
-		updated_at
-	) VALUES(
-		${userId},
-		${notes},
-		'created',
-		NOW(),
-		NOW()
-	)
-	RETURNING *
+  INSERT INTO orders(
+    user_id
+    notes,
+    status,
+    created_at,
+    updated_at
+  ) VALUES(
+    ${userId},
+    ${notes},
+    'created',
+    NOW(),
+    NOW()
+  )
+  RETURNING *
   `;
 
   interface Order {
@@ -103,7 +109,7 @@ function sqlFunction() {
   }
 
   const getOrder = (orderId: number) => sql<Order>("get-order")<Order>`
-	SELECT * FROM orders WHERE order_id = ${orderId}
+    SELECT * FROM orders WHERE order_id = ${orderId}
   `;
 
   const obj = { sql };
