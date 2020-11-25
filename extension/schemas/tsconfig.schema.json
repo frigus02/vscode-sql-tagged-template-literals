@@ -19,13 +19,24 @@
             },
             "then": {
               "properties": {
+                "enableDiagnostics": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Enable diagnostics by parsing SQL statements and validating types using the specified schema file."
+                },
                 "schemaFile": {
                   "type": "string",
                   "description": "Path to JSON file describing the types used in youe database schema. See https://github.com/frigus02/typescript-sql-tagged-template-plugin for more information."
                 },
                 "defaultSchemaName": {
                   "type": "string",
+                  "default": "public",
                   "description": "Databse schema name used when SQL statements don't specify a schema."
+                },
+                "enableFormat": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Enable formatting support for SQL in tagged template literals using pgFormatter. Requires Perl."
                 }
               }
             }

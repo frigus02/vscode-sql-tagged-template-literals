@@ -9,6 +9,8 @@ const pluginId = "typescript-sql-tagged-template-plugin";
 const extensionId = "frigus02.vscode-sql-tagged-template-literals";
 
 interface Configuration {
+  enableDiagnostics: boolean;
+  enableFormat: boolean;
   schemaFile?: string;
   defaultSchemaName?: string;
 }
@@ -23,7 +25,7 @@ const resolveSchemaFile = async (schemaFile: string): Promise<string> => {
       // to a tsconfig.json, which is what the plugin will do by default.
       await accessFile(resolvedPath);
       return resolvedPath;
-    } catch (e) {}
+    } catch (e) { }
   }
 
   return schemaFile;
@@ -31,6 +33,8 @@ const resolveSchemaFile = async (schemaFile: string): Promise<string> => {
 
 const getConfiguration = async (): Promise<Configuration> => {
   const config = vscode.workspace.getConfiguration(extensionId);
+  const enableDiagnostics = config.get<boolean>("enableDiagnostics", true);
+  const enableFormat = config.get<boolean>("enableFormat", true);
   const schemaFile = config.get<string | undefined>("schemaFile", undefined);
   const defaultSchemaName = config.get<string | undefined>(
     "defaultSchemaName",
@@ -38,6 +42,8 @@ const getConfiguration = async (): Promise<Configuration> => {
   );
 
   return {
+    enableDiagnostics,
+    enableFormat,
     schemaFile: schemaFile && (await resolveSchemaFile(schemaFile)),
     defaultSchemaName
   };
