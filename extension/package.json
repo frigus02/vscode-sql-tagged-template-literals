@@ -48,22 +48,6 @@
         }
       }
     },
-    "grammars": [
-      {
-        "injectTo": [
-          "source.js",
-          "source.js.jsx",
-          "source.jsx",
-          "source.ts",
-          "source.tsx"
-        ],
-        "scopeName": "inline.tagged-template-sql",
-        "path": "./syntaxes/grammar.json",
-        "embeddedLanguages": {
-          "meta.embedded.block.sql": "sql"
-        }
-      }
-    ],
     "typescriptServerPlugins": [
       {
         "name": "typescript-sql-tagged-template-plugin",
@@ -86,7 +70,8 @@
     "vscode": "^1.1.37"
   },
   "extensionDependencies": [
-    "vscode.typescript-language-features"
+    "vscode.typescript-language-features",
+    "frigus02.vscode-sql-tagged-template-literals-syntax-only"
   ],
   "scripts": {
     "vscode:prepublish": "yarn compile",
