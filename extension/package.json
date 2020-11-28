@@ -24,34 +24,30 @@
     "configuration": {
       "title": "SQL tagged template literals",
       "properties": {
-        "frigus02.vscode-sql-tagged-template-literals.schemaFile": {
-          "type": "string",
+        "frigus02.vscode-sql-tagged-template-literals.enableDiagnostics": {
           "scope": "window",
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Enable diagnostics by parsing SQL statements and validating types using the specified schema file."
+        },
+        "frigus02.vscode-sql-tagged-template-literals.schemaFile": {
+          "scope": "window",
+          "type": "string",
           "markdownDescription": "Path to JSON file describing the types used in your database schema. See [plugin documentation](https://github.com/frigus02/typescript-sql-tagged-template-plugin) for how to generate the file. You can specify the path in different ways:\n- Relative to the workspace root (only if you're working in a VS Code workspace with a single workspace folder)\n- Relative to the `tsconfig.json` file\n- Absolute"
         },
         "frigus02.vscode-sql-tagged-template-literals.defaultSchemaName": {
-          "type": "string",
           "scope": "window",
+          "type": "string",
           "markdownDescription": "Databse schema name used when SQL statements don't specify a schema. Defaults to `public`."
+        },
+        "frigus02.vscode-sql-tagged-template-literals.enableFormat": {
+          "scope": "window",
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Enable formatting support for SQL in tagged template literals using [pgFormatter](https://github.com/darold/pgFormatter). Requires Perl."
         }
       }
     },
-    "grammars": [
-      {
-        "injectTo": [
-          "source.js",
-          "source.js.jsx",
-          "source.jsx",
-          "source.ts",
-          "source.tsx"
-        ],
-        "scopeName": "inline.tagged-template-sql",
-        "path": "./syntaxes/grammar.json",
-        "embeddedLanguages": {
-          "meta.embedded.block.sql": "sql"
-        }
-      }
-    ],
     "typescriptServerPlugins": [
       {
         "name": "typescript-sql-tagged-template-plugin",
@@ -66,15 +62,16 @@
     ]
   },
   "dependencies": {
-    "typescript-sql-tagged-template-plugin": "0.0.15"
+    "typescript-sql-tagged-template-plugin": "0.1.0"
   },
   "devDependencies": {
-    "@types/node": "^13.13.4",
-    "typescript": "^3.8.3",
+    "@types/node": "^14.14.10",
+    "typescript": "^4.1.2",
     "vscode": "^1.1.37"
   },
   "extensionDependencies": [
-    "vscode.typescript-language-features"
+    "vscode.typescript-language-features",
+    "frigus02.vscode-sql-tagged-template-literals-syntax-only"
   ],
   "scripts": {
     "vscode:prepublish": "yarn compile",

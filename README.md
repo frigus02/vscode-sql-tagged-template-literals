@@ -4,7 +4,7 @@ A VS Code extension, which enables syntax highlighting for template literals tag
 
 There are 2 version of the extension available:
 
-- [extension](./extension): Syntax highlighting, syntax validation and type checking
+- [extension](./extension): Syntax highlighting, syntax validation, type checking and formatting
 - [extension-syntax-only](./extension-syntax-only): Syntax highlighting only
 
 ![GIF of code snippet showing SQL syntax](./docs/preview.gif)
