@@ -34,13 +34,21 @@ function sqlTag() {
   }
 
   const getOrder = (orderId: number) => sql<Order>`
-    SELECT * FROM orders WHERE order_id = ${orderId}
+    SELECT
+      *
+    FROM
+      orders
+    WHERE
+      order_id = ${orderId}
   `;
 
   const obj = { sql };
 
   const getAllOrders = () => obj.sql<Order[]>`
-    SELECT * FROM orders
+    SELECT
+      *
+    FROM
+      orders
   `;
 }
 
@@ -62,7 +70,7 @@ function sqlComment() {
     RETURNING *
   `;
 
-  const createTable = () => /*sql*/`
+  const createTable = () => /*sql*/ `
     CREATE TABLE \`teams\` (
       \`Id\` INT AUTO_INCREMENT PRIMARY KEY
     )
@@ -109,7 +117,12 @@ function sqlFunction() {
   }
 
   const getOrder = (orderId: number) => sql<Order>("get-order")<Order>`
-    SELECT * FROM orders WHERE order_id = ${orderId}
+    SELECT
+      *
+    FROM
+      orders
+    WHERE
+      order_id = ${orderId}
   `;
 
   const obj = { sql };
