@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.16] - 2020-11-28
+
+### Added
+
+- Formatting of SQL in tagged template literals (updated `typescript-sql-tagged-template-plugin`).
+
+  Formatting uses [pgFormatter](https://github.com/darold/pgFormatter) and requires Perl. If you have Perl installed, it should work right away. If it doesn't work, make sure you're using the "TypeScript and JavaScript language features" formatter. Formatting will not work if you're using another formatter like Prettier.
+
 ## [0.0.15] - 2020-11-04
 
 ### Fixed
@@ -144,7 +152,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.15...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.16...HEAD
+[0.0.16]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.15...v0.0.16
 [0.0.15]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.14...v0.0.15
 [0.0.14]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.13...v0.0.14
 [0.0.13]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.12...v0.0.13

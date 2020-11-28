@@ -2,7 +2,7 @@
   "name": "vscode-sql-tagged-template-literals",
   "displayName": "SQL tagged template literals",
   "description": "Syntax highlighting, validation and type checking for PostgreSQL in template literals tagged with `sql` function",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "license": "MIT",
   "publisher": "frigus02",
   "repository": {
