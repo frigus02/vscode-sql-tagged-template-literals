@@ -25,7 +25,7 @@ const resolveSchemaFile = async (schemaFile: string): Promise<string> => {
       // to a tsconfig.json, which is what the plugin will do by default.
       await accessFile(resolvedPath);
       return resolvedPath;
-    } catch (e) { }
+    } catch (e) {}
   }
 
   return schemaFile;
@@ -45,7 +45,7 @@ const getConfiguration = async (): Promise<Configuration> => {
     enableDiagnostics,
     enableFormat,
     schemaFile: schemaFile && (await resolveSchemaFile(schemaFile)),
-    defaultSchemaName
+    defaultSchemaName,
   };
 };
 
@@ -56,7 +56,7 @@ export async function activate(context: vscode.ExtensionContext) {
   }
 
   vscode.workspace.onDidChangeConfiguration(
-    async e => {
+    async (e) => {
       if (e.affectsConfiguration(extensionId)) {
         api.configurePlugin(pluginId, await getConfiguration());
       }
