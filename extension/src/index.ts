@@ -13,13 +13,14 @@ interface Configuration {
   enableFormat: boolean;
   schemaFile?: string;
   defaultSchemaName?: string;
+  pgFormatterConfigFile?: string;
 }
 
-const resolveSchemaFile = async (schemaFile: string): Promise<string> => {
+const resolveFileWorkspaceRelative = async (file: string): Promise<string> => {
   const workspaceFolders = vscode.workspace.workspaceFolders;
   if (workspaceFolders && workspaceFolders.length === 1) {
     const workspaceRoot = workspaceFolders[0].uri.fsPath;
-    const resolvedPath = resolvePath(workspaceRoot, schemaFile);
+    const resolvedPath = resolvePath(workspaceRoot, file);
     try {
       // If the file does not exist, we want to fall back to a path relative
       // to a tsconfig.json, which is what the plugin will do by default.
@@ -28,7 +29,7 @@ const resolveSchemaFile = async (schemaFile: string): Promise<string> => {
     } catch (e) {}
   }
 
-  return schemaFile;
+  return file;
 };
 
 const getConfiguration = async (): Promise<Configuration> => {
@@ -40,12 +41,19 @@ const getConfiguration = async (): Promise<Configuration> => {
     "defaultSchemaName",
     undefined
   );
+  const pgFormatterConfigFile = config.get<string | undefined>(
+    "pgFormatterConfigFile",
+    undefined
+  );
 
   return {
     enableDiagnostics,
     enableFormat,
-    schemaFile: schemaFile && (await resolveSchemaFile(schemaFile)),
+    schemaFile: schemaFile && (await resolveFileWorkspaceRelative(schemaFile)),
     defaultSchemaName,
+    pgFormatterConfigFile:
+      pgFormatterConfigFile &&
+      (await resolveFileWorkspaceRelative(pgFormatterConfigFile)),
   };
 };
 

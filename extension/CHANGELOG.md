@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Customize formatting by specifying a pgFormatter config file (updated `typescript-sql-tagged-template-plugin`).
+
 ## [0.0.16] - 2020-11-28
 
 ### Added

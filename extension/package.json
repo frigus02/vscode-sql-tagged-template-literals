@@ -30,6 +30,12 @@
           "default": true,
           "markdownDescription": "Enable diagnostics by parsing SQL statements and validating types using the specified schema file."
         },
+        "frigus02.vscode-sql-tagged-template-literals.enableFormat": {
+          "scope": "window",
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Enable formatting support for SQL in tagged template literals using [pgFormatter](https://github.com/darold/pgFormatter). Requires Perl."
+        },
         "frigus02.vscode-sql-tagged-template-literals.schemaFile": {
           "scope": "window",
           "type": "string",
@@ -40,11 +46,10 @@
           "type": "string",
           "markdownDescription": "Databse schema name used when SQL statements don't specify a schema. Defaults to `public`."
         },
-        "frigus02.vscode-sql-tagged-template-literals.enableFormat": {
+        "frigus02.vscode-sql-tagged-template-literals.pgFormatterConfigFile": {
           "scope": "window",
-          "type": "boolean",
-          "default": true,
-          "markdownDescription": "Enable formatting support for SQL in tagged template literals using [pgFormatter](https://github.com/darold/pgFormatter). Requires Perl."
+          "type": "string",
+          "markdownDescription": "Path to pgFormatter config file. Use this to customize SQL formatting. See [pg_format.config.sample](https://github.com/darold/pgFormatter/blob/v4.4/doc/pg_format.conf.sample) for available options. You can specify the path in different ways:\n- Relative to the workspace root (only if you're working in a VS Code workspace with a single workspace folder)\n- Relative to the `tsconfig.json` file\n- Absolute"
         }
       }
     },
@@ -74,7 +79,7 @@
     "frigus02.vscode-sql-tagged-template-literals-syntax-only"
   ],
   "scripts": {
-    "vscode:prepublish": "yarn compile",
-    "compile": "yarn tsc"
+    "vscode:prepublish": "yarn build",
+    "build": "yarn tsc"
   }
 }
