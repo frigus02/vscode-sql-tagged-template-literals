@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.17] - 2021-01-02
+
 ### Added
 
 - Customize formatting by specifying a pgFormatter config file (updated `typescript-sql-tagged-template-plugin`).
@@ -156,7 +158,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.16...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.17...HEAD
+[0.0.17]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.16...v0.0.17
 [0.0.16]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.15...v0.0.16
 [0.0.15]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.14...v0.0.15
 [0.0.14]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.13...v0.0.14
