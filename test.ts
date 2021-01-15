@@ -131,3 +131,12 @@ function sqlFunction() {
     SELECT * FROM orders
   `;
 }
+
+function normalSqlFunction() {
+  const test = () => "sql";
+  const sql = () => "sql";
+
+  const a = test();
+  const b = sql();
+  const c = test();
+}

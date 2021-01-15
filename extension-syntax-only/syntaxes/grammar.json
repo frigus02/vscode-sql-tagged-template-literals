@@ -8,7 +8,7 @@
       "beginCaptures": {
         "1": { "name": "meta.function-call.ts entity.name.function.ts" }
       },
-      "end": "(?<=`)",
+      "end": "(?<=(`|\\)\\s*[^\\s`]))",
       "patterns": [
         { "include": "source.ts#comment" },
         {
