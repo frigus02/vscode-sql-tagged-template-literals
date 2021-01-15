@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.17] - 2021-01-15
+
+### Changed
+
+- Updated TypeScript grammar to latest version
+
+### Fixed
+
+- Fixed incorrect syntax highlighting when using `sql` as a regular function ([#16](https://github.com/frigus02/vscode-sql-tagged-template-literals/issues/16))
+
 ## [0.0.16] - 2020-12-04
 
 ### Added
@@ -120,7 +130,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.16...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.17...HEAD
+[0.0.17]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.16...v0.0.17
 [0.0.16]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.15...v0.0.16
 [0.0.15]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.14...v0.0.15
 [0.0.14]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.13...v0.0.14
