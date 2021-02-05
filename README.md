@@ -23,17 +23,28 @@ There are 2 version of the extension available:
 
 _(For maintainers)_
 
-```
-npm install -g vsce
+1. Update version in package.json and CHANGELOG.md
 
-REPO=https://github.com/frigus02/vscode-sql-tagged-template-literals/raw/main/
+2. Publish new version
 
-cd extension/
-vsce publish --baseImagesUrl $REPO/extension/
+   ```
+   npm install -g vsce
 
-cd extension-syntax-only/
-vsce publish --baseImagesUrl $REPO/extension-syntax-only/
-```
+   REPO=https://github.com/frigus02/vscode-sql-tagged-template-literals/raw/main/
+
+   cd extension/
+   vsce publish --baseImagesUrl $REPO/extension/
+
+   cd extension-syntax-only/
+   vsce publish --baseImagesUrl $REPO/extension-syntax-only/
+   ```
+
+3. Tag new version
+
+   ```
+   git tag extension-vX.X.X
+   git tag extension-syntax-only-vX.X.X
+   ```
 
 ## Thanks
 

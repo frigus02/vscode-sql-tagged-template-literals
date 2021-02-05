@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.18] - 2021-02-05
+
+### Changed
+
+- Improved README
+
 ## [0.0.17] - 2021-01-02
 
 ### Added
@@ -158,7 +164,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.17...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.18...HEAD
+[0.0.18]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.17...v0.0.18
 [0.0.17]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.16...v0.0.17
 [0.0.16]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.15...v0.0.16
 [0.0.15]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.14...v0.0.15
