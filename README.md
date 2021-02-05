@@ -26,7 +26,7 @@ _(For maintainers)_
 ```
 npm install -g vsce
 
-REPO=https://github.com/frigus02/vscode-sql-tagged-template-literals/raw/master/
+REPO=https://github.com/frigus02/vscode-sql-tagged-template-literals/raw/main/
 
 cd extension/
 vsce publish --baseImagesUrl $REPO/extension/
