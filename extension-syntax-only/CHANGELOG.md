@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Support `sql` and `sqlFragment` as private functions on classes. E.g.:
+
+  ```ts
+  class Test {
+    #sql;
+    run() {
+      this.#sql`SELECT * FROM users`;
+    }
+  }
+  ```
+
 ## [0.0.18] - 2021-02-05
 
 ### Added

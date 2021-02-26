@@ -50,6 +50,15 @@ function sqlTag() {
     FROM
       orders
   `;
+
+  class Test {
+    sql: typeof sql;
+    #sql: typeof sql;
+    run() {
+      this.sql`SELECT * FROM users`;
+      this.#sql`SELECT * FROM users`;
+    }
+  }
 }
 
 function sqlComment() {
@@ -130,6 +139,15 @@ function sqlFunction() {
   const getAllOrders = () => obj.sql<Order[]>("get-all-orders")`
     SELECT * FROM orders
   `;
+
+  class Test {
+    sql: typeof sql;
+    #sql: typeof sql;
+    run() {
+      this.sql("run")`SELECT * FROM users`;
+      this.#sql("run")`SELECT * FROM users`;
+    }
+  }
 }
 
 function normalSqlFunction() {
