@@ -17,7 +17,7 @@ There are 2 version of the extension available:
 - The pattern `source.ts#template-substitution-element` refers to the variables in the template literal, e.g. `${userId}`. It should probably be the first pattern in the list to ensure these are highlighted properly.
 - The pattern `source.ts#string-character-escape` refers to escaped backtics in the template literal, e.g. `\``. It should come before the SQL patterns in the list in order to not confuse SQL.
 - A pattern cannot span multiple lines. To match something across multiple lines, you have to use nested patterns; [good explanation](https://github.com/Microsoft/vscode-textmate/issues/41#issuecomment-358459018).
-- The [TypeScript language definition](https://github.com/microsoft/vscode/blob/74623bc93c5482cbf6fbb78346167cb39717b703/extensions/typescript-basics/syntaxes/TypeScript.tmLanguage.json) can be useful to lookup and use existing patterns. The `sql()` function syntax in this repository makes use of some of the patterns used in a `#function-call`.
+- The [TypeScript language definition](https://github.com/microsoft/vscode/blob/main/extensions/typescript-basics/syntaxes/TypeScript.tmLanguage.json) can be useful to lookup and use existing patterns. The `sql()` function syntax in this repository makes use of some of the patterns used in a `#function-call`.
 
 ## Publish new version
 
