@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.0.19] - 2021-02-26
+
 ### Added
 
 - Support `sql` and `sqlFragment` as private functions on classes. E.g.:
@@ -153,7 +155,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First release.
 
-[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.18...HEAD
+[unreleased]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.19...HEAD
+[0.0.19]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.18...v0.0.19
 [0.0.18]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.17...v0.0.18
 [0.0.17]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.16...v0.0.17
 [0.0.16]: https://github.com/frigus02/vscode-sql-tagged-template-literals/compare/v0.0.15...v0.0.16
