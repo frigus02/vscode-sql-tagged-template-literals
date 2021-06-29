@@ -33,7 +33,7 @@ Syntax highlighting works for `sql` and `sqlFragment` template tags and function
 - Comments before template literals:
 
   ```ts
-  /* sql * / `SELECT * FROM user`
+  /* sql */ `SELECT * FROM user`
   /* sqlFragment */ `WHERE id = ${id}`;
   ```
 
