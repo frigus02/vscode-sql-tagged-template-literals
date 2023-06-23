@@ -17,15 +17,15 @@ pg-query-emscripten@^0.1.0:
   resolved "https://registry.yarnpkg.com/pg-query-emscripten/-/pg-query-emscripten-0.1.0.tgz#a4c6c7c6b3645ab0a4436bf650f3bcdf5b530c23"
   integrity sha512-Awwf0s6gyVZEmZeMLXnXZOIQveqVEBFhxMkR0UcMmijwX/y9FW1od71X1hNRtGFWrU/ML5sxerZyH20pvpLGuA==
 
-typescript-sql-tagged-template-plugin@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/typescript-sql-tagged-template-plugin/-/typescript-sql-tagged-template-plugin-0.2.0.tgz#9f1a48db6e57e4bb19e57c2703e91934120050bb"
-  integrity sha512-ZxvsGIKyGcyGVxQrneFoM2oC5/7jqxjnbXCCV9afDfFPSsAM15K7MDs0v/4h7unxeOEHjBG14Lha9etqOkgc/g==
+typescript-sql-tagged-template-plugin@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/typescript-sql-tagged-template-plugin/-/typescript-sql-tagged-template-plugin-0.3.0.tgz#e36e3c8e64956e8aeaec5d9375f6fda67030f475"
+  integrity sha512-Wu9rrqe4eJ87BNzZ/HVzxKsNWJYXSqqpvuRunn3n4Cq3USY0kYADC0tzDlg9FAn842MHByxRB4YMTjC1ofPqNA==
   dependencies:
     pg-query-emscripten "^0.1.0"
-    typescript-template-language-service-decorator "^2.2.0"
+    typescript-template-language-service-decorator "^2.3.2"
 
-typescript-template-language-service-decorator@^2.2.0:
+typescript-template-language-service-decorator@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/typescript-template-language-service-decorator/-/typescript-template-language-service-decorator-2.3.2.tgz#095c1b5ea88c839d9b202fad3ec8c87c1b062953"
   integrity sha512-hN0zNkr5luPCeXTlXKxsfBPlkAzx86ZRM1vPdL7DbEqqWoeXSxplACy98NpKpLmXsdq7iePUzAXloCAoPKBV6A==

@@ -67,7 +67,7 @@
     ]
   },
   "dependencies": {
-    "typescript-sql-tagged-template-plugin": "0.2.0"
+    "typescript-sql-tagged-template-plugin": "0.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
