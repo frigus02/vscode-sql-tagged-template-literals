@@ -285,10 +285,10 @@ supports-color@5.4.0:
   dependencies:
     has-flag "^3.0.0"
 
-typescript-sql-tagged-template-plugin@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/typescript-sql-tagged-template-plugin/-/typescript-sql-tagged-template-plugin-0.1.1.tgz#db3f4723cda0ca6c1ae5f1118e860bc8684b0649"
-  integrity sha512-47s/L0DAIWtCiN11vrYoJjdebFZJoVXFpzNDAX9Jn0QrVADqyJpVeiomHqP9doJc3HeDL5edZWWtN9ga4kplCQ==
+typescript-sql-tagged-template-plugin@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/typescript-sql-tagged-template-plugin/-/typescript-sql-tagged-template-plugin-0.2.0.tgz#9f1a48db6e57e4bb19e57c2703e91934120050bb"
+  integrity sha512-ZxvsGIKyGcyGVxQrneFoM2oC5/7jqxjnbXCCV9afDfFPSsAM15K7MDs0v/4h7unxeOEHjBG14Lha9etqOkgc/g==
   dependencies:
     pg-query-emscripten "^0.1.0"
     typescript-template-language-service-decorator "^2.2.0"
