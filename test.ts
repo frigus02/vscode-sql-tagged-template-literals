@@ -4,7 +4,7 @@ function sqlTag() {
     values: any[];
   }
 
-  const sql = <T = any>(
+  const sql = <T = any, OtherT = unknown>(
     strings: TemplateStringsArray,
     ...values: any[]
   ): Query<T> => ({
@@ -45,10 +45,15 @@ function sqlTag() {
   const obj = { sql };
 
   const getAllOrders = () => obj.sql<Order[]>`
-    SELECT
-      *
-    FROM
-      orders
+    SELECT * FROM orders
+  `;
+
+  type SomeLongTypeCausingALineBreakInTheFunctionGenerics = unknown;
+  const getAllOrders2 = () => obj.sql<
+    Order[],
+    SomeLongTypeCausingALineBreakInTheFunctionGenerics
+  >`
+    SELECT * FROM orders
   `;
 
   class Test {
@@ -93,7 +98,7 @@ function sqlFunction() {
     values: any[];
   }
 
-  const sql = <T1 = any>(name: string) => <T2 = any>(
+  const sql = <T1 = any, OtherT = unknown>(name: string) => <T2 = any>(
     strings: TemplateStringsArray,
     ...values: any[]
   ): Query<T1, T2> => ({
@@ -137,6 +142,14 @@ function sqlFunction() {
   const obj = { sql };
 
   const getAllOrders = () => obj.sql<Order[]>("get-all-orders")`
+    SELECT * FROM orders
+  `;
+
+  type SomeLongTypeCausingALineBreakInTheFunctionGenerics = unknown;
+  const getAllOrders2 = () => obj.sql<
+    Order[],
+    SomeLongTypeCausingALineBreakInTheFunctionGenerics
+  >("get-all-orders")`
     SELECT * FROM orders
   `;
 
