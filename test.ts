@@ -42,6 +42,17 @@ function sqlTag() {
       order_id = ${orderId}
   `;
 
+  const getOdrerMultilineGeneric = (orderId: number) => sql<{
+    order_id: number;
+  }>`
+  SELECT
+    *
+  FROM
+    orders
+  WHERE
+    order_id = ${orderId}
+`;
+
   const obj = { sql };
 
   const getAllOrders = () => obj.sql<Order[]>`
